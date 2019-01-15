@@ -1,0 +1,40 @@
+<div class="container">
+    <p>
+        <a href="./">
+            <img src="./images/movietime.jpg" alt="Movie Time Logo" title="Home" height="auto" width="100%">
+        </a>
+    </p>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Popular Movies</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                {{#each popularList}}
+                <div class="col-md-2">
+                    <div>
+                        {{#if this.poster_path}}
+                        <a class="btn btn-default" href="/movie/{{this.id}}">
+                            <img class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{this.poster_path}}">
+                        </a>
+
+                        {{/if}}
+                        <h4>{{movie.title}}</h4>
+                        <p>{{movie.release_date}}</p>
+                        <p><a class="btn btn-default" href="/movie/{{this.id}}">View details &raquo;</a></p>
+                        <hr>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2019 Movie Time</p>
+    </footer>
+</div> <!-- /container -->

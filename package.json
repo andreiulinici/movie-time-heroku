@@ -1,0 +1,30 @@
+{
+  "name": "movie-time-heroku",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Movie player",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andreiulinici/movie-time-heroku.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "npm": "latest",
+    "node": "latest"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "express-handlebars": "latest",
+    "express-messages": "latest",
+    "express-session": "latest",
+    "express-validator": "latest"
+  },
+  "devDependencies": {}
+}

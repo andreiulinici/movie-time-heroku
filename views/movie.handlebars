@@ -1,0 +1,55 @@
+<div class="container">
+    <p>
+        <a href="../">
+            <img src="../images/movietime.jpg" alt="Movie Time Logo" title="Home" height="auto" width="100%">
+        </a>
+    </p>
+
+    {{#if movie}}
+    <div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{movie.title}} </h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="list-group">
+
+                            <li class="list-group-item"><b>Genres:</b>
+                                {{#each movie.genres}}
+                                <span>{{genre.name}},
+                                </span>
+                                {{/each}}
+                            </li>
+                            <li class="list-group-item"><b>Release Date:</b> {{movie.release_date}}</li>
+                            <li class="list-group-item"><b>Overview:</b> {{movie.overview}}</li>
+                            <hr>
+                        </ul>
+                        <br>
+                        <video controls>
+                            <source src="../movies/{{movieFileName}}.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <br>
+                        {{#if movie.homepage}}
+                        <a href="{{movie.homepage}}" target="_blank" class="btn btn-default">
+                            Visit Movie Website
+                        </a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2019 Movie Time</p>
+    </footer>
+</div>
