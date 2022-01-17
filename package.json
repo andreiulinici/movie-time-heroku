@@ -11,7 +11,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "npm": "latest",
@@ -24,7 +26,9 @@
     "express-handlebars": "latest",
     "express-messages": "latest",
     "express-session": "latest",
-    "express-validator": "latest"
+    "express-validator": "6.5.0",
+    "@snyk/protect": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "snyk": true
 }
